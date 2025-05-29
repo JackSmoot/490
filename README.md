@@ -7,4 +7,4 @@
 - Sound effects
 - Fluid water motion?
 - Reset button
-- 
+- Rules
