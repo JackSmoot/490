@@ -8,3 +8,4 @@ https://490-five.vercel.app/
 - Fluid water motion?
 - Reset button
 - Rules
+- BEST SOLUTION: X moves
