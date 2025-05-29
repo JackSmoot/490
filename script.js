@@ -13,6 +13,9 @@ const cups = [
       const fillEl = document.getElementById(`fill-${i}`);
       const height = (cup.current / cup.max) * 100;
       fillEl.style.height = height + "%";
+
+      const amountEl = document.getElementById(`amount-${i}`);
+      amountEl.textContent = `${cup.current}oz`;
     });
   
     checkWin();
