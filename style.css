@@ -36,14 +36,22 @@
   /* Cups */
   .cup {
     width: 80px;
-    height: 50vh;
+    position: relative;
     border: 3px solid #333;
     background: white;
-    position: relative;
     cursor: grab;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  
+  /* Proportional heights */
+  .cup-4 {
+    height: 30vh; /* 4oz -> shorter */
+  }
+  
+  .cup-9 {
+    height: 60vh; /* 9oz -> taller */
   }
   
   /* Water fill */
