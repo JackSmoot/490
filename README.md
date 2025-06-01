@@ -3,9 +3,9 @@
 https://490-five.vercel.app/ 
 *TODO*
 - Move counter 
-- Make 4 cup smaller
+X- Make 4 cup smaller
 - Sound effects
 - Fluid water motion?
-- Reset button
+X- Reset button
 - Rules
 - BEST SOLUTION: X moves
