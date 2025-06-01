@@ -67,6 +67,16 @@ const cups = [
       messageEl.textContent = "";
     }
   }
+
+  function resetGame() {
+    cups[0].current = 4;
+    cups[1].current = 9;
+    cups[2].current = 0;
+    dumpUses = 0;
+    history = [];
+    render();
+    document.getElementById("message").textContent = "";
+  }
   
   // Drag-and-drop interaction
   document.querySelectorAll(".cup").forEach(cupEl => {
