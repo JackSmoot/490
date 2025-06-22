@@ -80,6 +80,7 @@ const cups = [
     dumpUses = 0;
     history = [];
     moveCount = 0;
+    updateMoveCount();
     render();
     document.getElementById("message").textContent = "";
   }
