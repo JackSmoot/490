@@ -1,3 +1,5 @@
+let moveCount = 0;
+
 const cups = [
     { max: 4, current: 4 },
     { max: 9, current: 9 },
@@ -26,6 +28,13 @@ const cups = [
   }
   
   function undoMove() {
+    if (history.length > 0) {
+      const lastState = history.pop();
+      cups = JSON.parse(JSON.stringify(lastState));
+      moveCount = Math.max(0, moveCount - 1);
+      updateMoveCount();
+      render();
+    }
     if (history.length === 0) return;
     cups.splice(0, 3, ...history.pop());
     render();
@@ -74,6 +83,7 @@ const cups = [
     cups[2].current = 0;
     dumpUses = 0;
     history = [];
+    moveCount = 0;
     render();
     document.getElementById("message").textContent = "";
   }
@@ -93,6 +103,8 @@ const cups = [
       if (draggingCup === null || draggingCup === targetCup) return;
   
       saveState();
+      moveCount++;
+      updateMoveCount();
       pourWater(draggingCup, targetCup);
       draggingCup = null;
       render();
@@ -112,6 +124,10 @@ const cups = [
   
     source.current -= amount;
     dest.current += amount;
+  }
+
+  function updateMoveCount() {
+    document.getElementById("move-count").textContent = moveCount;
   }
 
   function toggleRules() {
