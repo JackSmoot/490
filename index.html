@@ -8,6 +8,24 @@
 </head>
 <body>
   <h1>4-9-0 Cup Problem</h1>
+
+  <button onclick="toggleRules()">Show Rules</button>
+
+  <div id="rules" style="display: none; text-align: left; max-width: 600px; margin: 20px auto;">
+    <h2>Game Rules</h2>
+    <ul>
+      <li>There are 3 cups:</li>
+      <ul>
+        <li>Cup 1 holds 4oz (starts full)</li>
+        <li>Cup 2 holds 9oz (starts full)</li>
+        <li>Cup 3 holds 9oz (starts empty)</li>
+      </ul>
+      <li>Goal: Get exactly <strong>6oz</strong> in any one cup.</li>
+      <li>You can only pour from one cup to another until the source is empty or destination is full.</li>
+      <li>You may dump out the cup with the least water <strong>up to 2 times</strong>.</li>
+    </ul>
+  </div>
+
   <div id="game">
     <div class="cup cup-4" data-id="0">
       <div class="label">Cup 1<br>4oz max</div>
