@@ -113,6 +113,19 @@ const cups = [
     source.current -= amount;
     dest.current += amount;
   }
+
+  function toggleRules() {
+    const rules = document.getElementById("rules");
+    const btn = event.target;
+  
+    if (rules.style.display === "none") {
+      rules.style.display = "block";
+      btn.textContent = "Hide Rules";
+    } else {
+      rules.style.display = "none";
+      btn.textContent = "Show Rules";
+    }
+  }
   
   render();
   
