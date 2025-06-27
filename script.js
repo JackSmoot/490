@@ -28,6 +28,7 @@ const cups = [
   }
   
   function undoMove() {
+    
     if (history.length === 0) return;
     cups.splice(0, 3, ...history.pop());
     moveCount = Math.max(0, moveCount - 1);
